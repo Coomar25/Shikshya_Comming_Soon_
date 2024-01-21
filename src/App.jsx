@@ -107,9 +107,11 @@ function App() {
               <div className="bg-white flex items-center px-3 rounded">
                 <form ref={form} onSubmit={sendEmail}>
                   <input
-                    type="text"
+                    type="email"
                     name="message"
                     placeholder="Enter your email"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    required
                     className="flex-1 bg-transparent h-full block w-full py-6 placeholder:text-secondary-500 text-base focus:outline-none focus:ring-0"
                   />
                   <div className="flex-none">
